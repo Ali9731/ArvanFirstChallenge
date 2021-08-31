@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-gallery-right);
+      }
+
+      .cls-2 {
+        fill: #d4e0ef;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <clipPath id="clip-gallery-right">
+      <rect width="46" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="gallery-right" class="cls-1">
+    <path id="Path_130970" data-name="Path 130970" class="cls-2" d="M22.7,0A22.7,22.7,0,1,0,45.4,22.7,22.7,22.7,0,0,0,22.7,0Z" transform="translate(45.4 45.4) rotate(180)"/>
+    <path id="Path_130971" data-name="Path 130971" class="cls-3" d="M20.313,5,12,13.313l8.313,8.313" transform="translate(40.454 35.693) rotate(180)"/>
+  </g>
+</svg>

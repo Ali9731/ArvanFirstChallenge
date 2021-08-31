@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 22">
+            <g id="loader" transform="translate(-1 -1)">
+                <line id="Line_905" data-name="Line 905" y2="4" transform="translate(12 2)" fill="none" stroke="#1abbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_906" data-name="Line 906" y2="4" transform="translate(12 18)" fill="none" stroke="#1abbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_907" data-name="Line 907" x2="2.83" y2="2.83" transform="translate(4.93 4.93)" fill="none" stroke="#9db0cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_908" data-name="Line 908" x2="2.83" y2="2.83" transform="translate(16.24 16.24)" fill="none" stroke="#9db0cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_909" data-name="Line 909" x2="4" transform="translate(2 12)" fill="none" stroke="#1abbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_910" data-name="Line 910" x2="4" transform="translate(18 12)" fill="none" stroke="#1abbb0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_911" data-name="Line 911" y1="2.83" x2="2.83" transform="translate(4.93 16.24)" fill="none" stroke="#9db0cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <line id="Line_912" data-name="Line 912" y1="2.83" x2="2.83" transform="translate(16.24 4.93)" fill="none" stroke="#9db0cb" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+        </svg>

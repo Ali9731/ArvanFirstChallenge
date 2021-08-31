@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="11" viewBox="0 0 10 11">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-right-edge);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-right-edge">
+      <rect width="10" height="11"/>
+    </clipPath>
+  </defs>
+  <g id="right-edge" class="cls-1">
+    <path id="Path_130423" data-name="Path 130423" class="cls-2" d="M15355.239,4821.645s.227,10.916,11.875,11.115h-11.875Z" transform="translate(-15355.239 -4821.645)"/>
+  </g>
+</svg>

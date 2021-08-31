@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-3 2)">
+      <rect id="Rectangle_4621" data-name="Rectangle 4621" width="48" height="48" rx="12" transform="translate(4 -1)" fill="#e7ecf4"/>
+      <rect id="Rectangle_4623" data-name="Rectangle 4623" width="38" height="38" rx="8" transform="translate(9 4)" fill="#20c5ba"/>
+      <path id="github_1_" data-name="github (1)" d="M9,19c-5,1.5-5-2.5-7-3m14,6V18.13a3.37,3.37,0,0,0-.94-2.61c3.14-.35,6.44-1.54,6.44-7A5.439,5.439,0,0,0,20,4.771,5.07,5.07,0,0,0,19.91,1S18.73.65,16,2.48a13.38,13.38,0,0,0-7,0C6.27.65,5.09,1,5.09,1A5.07,5.07,0,0,0,5,4.77,5.44,5.44,0,0,0,3.5,8.55c0,5.42,3.3,6.61,6.44,7A3.37,3.37,0,0,0,9,18.13V22" transform="translate(16.5 11.527)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-gallery-hover);
+      }
+
+      .cls-2 {
+        fill: #1abbb0;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <clipPath id="clip-gallery-hover">
+      <rect width="46" height="46"/>
+    </clipPath>
+  </defs>
+  <g id="gallery-hover" class="cls-1">
+    <path id="Path_131054" data-name="Path 131054" class="cls-2" d="M22.7,0A22.7,22.7,0,1,0,45.4,22.7,22.7,22.7,0,0,0,22.7,0Z" transform="translate(45.4 45.4) rotate(180)"/>
+    <path id="Path_131055" data-name="Path 131055" class="cls-3" d="M20.313,5,12,13.313l8.313,8.313" transform="translate(40.454 35.693) rotate(180)"/>
+  </g>
+</svg>

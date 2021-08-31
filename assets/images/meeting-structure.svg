@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Artboard_1);
+      }
+
+      .cls-2 {
+        fill: #c9d9ea;
+        opacity: 0.36;
+      }
+
+      .cls-3 {
+        fill: #20c5ba;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-Artboard_1">
+      <rect width="48" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" class="cls-1">
+    <rect id="Rectangle_1609" data-name="Rectangle 1609" class="cls-2" width="48" height="48" rx="12"/>
+    <rect id="Rectangle_1608" data-name="Rectangle 1608" class="cls-3" width="38" height="38" rx="8" transform="translate(5 5)"/>
+    <path id="Path_133688" data-name="Path 133688" class="cls-4" d="M17,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2" transform="translate(12 12)"/>
+    <circle id="Ellipse_1351" data-name="Ellipse 1351" class="cls-4" cx="4" cy="4" r="4" transform="translate(17 15)"/>
+    <path id="Path_133689" data-name="Path 133689" class="cls-4" d="M23,21V19a4,4,0,0,0-3-3.87" transform="translate(12 12)"/>
+    <path id="Path_133690" data-name="Path 133690" class="cls-4" d="M16,3.13a4,4,0,0,1,0,7.75" transform="translate(12 12)"/>
+  </g>
+</svg>
