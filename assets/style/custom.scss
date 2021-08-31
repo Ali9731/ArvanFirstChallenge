@@ -9,7 +9,13 @@ $theme_text_color:#6A7D9B;
 $theme_special_borders:2px solid #20C5BA;
 $theme_text_active:#042623;
 $theme_input_border:1px solid #DBE4F2;
-
+$h4_colors: #253343;
+$theme_special_light_color:#00BABA;
+$light_color:#fff;
+$body_color: #F6F8FB;
+$button_backgrounds:#E7ECF4;
+$meeting_main_color:#9DB0CB;
+$danger_color:#FE5959;
 * {
   font-family:  'YekanBakh';
 }
@@ -28,18 +34,18 @@ strong{
   color: $theme_special_color;
 }
 h4{
-  color: #253343;
+  color:$h4_colors;
 }
 p,h1{
   padding: 0;
   margin: 0;
-color: #6A7D9B;
+color:$theme_text_color;
 }
 button{
   font-family: 'YekanBakh';
 }
 body {
-  background-color: #F6F8FB;
+  background-color:$body_color;
   font-family:  'YekanBakh';
   font-size: 18px;
   direction: rtl;
@@ -53,7 +59,7 @@ button {
   display: none;
 }
 .light_text_color{
-  color: #6A7D9B;
+  color:$theme_text_color;
 }
 .Container {
   margin: auto;
@@ -109,7 +115,7 @@ button {
   border: none;
   cursor: pointer;
   margin-left: 20px;
-  background-color: #E7ECF4;
+  background-color: $button_backgrounds;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,7 +132,7 @@ button {
 .Projects__Tabs-Buttons-links-active {
   -webkit-box-shadow:$theme_box_shadow;
           box-shadow:$theme_box_shadow;
-  background-color: #FFFFFF;
+  background-color:$light_color;
   position: relative;
 }
 .Projects__Tabs-Buttons-links-active::before{
@@ -147,7 +153,7 @@ top: 44px;
 .Projects__Tab {
   width: 100%;
   height:auto;
-  background-color: #FFFFFF;
+  background-color:$light_color;
   position: relative;
   top: 60px;
   padding-top: 15px;
@@ -217,7 +223,7 @@ top: 44px;
 }
 .Projects__Tab-Box-Toggle::after {
   content: "";
-  background-color: #e7ecf4;
+  background-color: $button_backgrounds;
   -webkit-transition: background-color .2s ease-in-out;
   transition: background-color .2s ease-in-out;
   width: 29px;
@@ -258,7 +264,7 @@ top: 44px;
 .Projects__Tab-Box-Details-Box {
   width: 170px;
   height: 159px;
-  background-color: #F6F8FB;
+  background-color: $body_color;
   border-radius: $theme_border_radius;
   display: flex;
   flex-direction: column;
@@ -287,7 +293,7 @@ top: 44px;
   line-height: 35px;
   & p{
     position: relative;
-    color: #6A7D9B;
+    color:$theme_text_color;
   }
   & p::before{
     content: "";
@@ -305,7 +311,7 @@ top: 44px;
   width: 80%;
   margin:52px auto 0 auto;
   border-radius:$theme_border_radius;
-  border: 2px solid #E7ECF4;
+  border: 2px solid $button_backgrounds;
   padding: 20px;
   justify-content: space-between;
   & > img{
@@ -316,7 +322,7 @@ top: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #E7ECF4;
+  border: 1px solid $button_backgrounds;
   padding: 5px;
 }
 .Projects__Tab-Box-Details-Git-address{
@@ -326,7 +332,7 @@ top: 44px;
   }
 }
 .Meeting-structure{
-  background-color: #EEF2F7;
+  background-color: $theme_main_color;
   height:auto;
   width: 100%;
   padding-bottom: 200px;;
@@ -350,7 +356,7 @@ top: 44px;
 .Meeting-structure--seperator{
   width: 100%;
   height: 2px;
-  background-color: #9DB0CB;
+  background-color: $meeting_main_color;
   opacity: 20%;
   margin-top: -2.5px;
 }
@@ -366,7 +372,7 @@ top: 44px;
   cursor: pointer;
 }
 .Meeting-structure__Tab-Button{
-  color: #9db0cb;
+  color: $meeting_main_color;
 }
 .Meeting-structure__Tab-Button--active{
   color: $theme_text_active;
@@ -380,7 +386,7 @@ top: 44px;
     right: 0;
     width: 100%;
     height: 3px;
-    background-color: #20c5ba;
+    background-color: $theme_special_color;
     border-radius: 10px;
     z-index: 1000;
 }
@@ -393,7 +399,7 @@ top: 44px;
   position: relative;
   top: 50px;
   height: auto;
-  background-color: #fff;
+  background-color:$light_color;
   border-radius: $theme_border_radius;
   box-shadow: $theme_box_shadow;
   border: $theme_special_borders;
@@ -415,7 +421,7 @@ top: 44px;
 }
 .Register-Form{
   width: 100%;
-  background-color: #fff;
+  background-color:$light_color;
   margin-bottom: 85px;
 }
 .Register-Form-main{
@@ -499,7 +505,7 @@ top: 44px;
   padding-right: 20px;
   width:344px;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color:$light_color;
     border:$theme_input_border;
     height: 40px;
     border-radius: $theme_border_radius;
@@ -525,7 +531,7 @@ top: 44px;
     padding-right: 20px;
     width:100%;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color:$light_color;
       border:$theme_input_border;
       height: 40px;
       border-radius: $theme_border_radius;
@@ -545,8 +551,8 @@ top: 44px;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #DBE4F2;
+    background-color: $light_color;
+    border:$theme_input_border;
     height: 40px;
     border-radius: 16px;
 
@@ -580,7 +586,7 @@ top: 44px;
 .Register-Form__fileinput-box:hover .Register-Form__input-button{
   background-color: $theme_special_color;
   border: $theme_special_borders;
-  color: #fff;
+  color: $light_color;
   transition: 0.1s;
 }
 .Register-Form__fileinput-box--active .Register-Form__filetext{
@@ -594,21 +600,21 @@ top: 44px;
 .Register-Form__fileinput-box--active .Register-Form__input-button{
   background-color: $theme_special_color;
   border: $theme_special_borders;
-  color: #fff;
+  color: $light_color;
   transition: 0.1s;
 }
 .Register-Form__fileinput-box--danger .Register-Form__filetext{
-  border:2px solid #FE5959;
+  border:2px solid $danger_color;
   border-radius: $theme_border_radius;
   box-sizing: border-box;
   transition: 0.05s;
-  color:#FE5959;
+  color:$danger_color;
   
 }
 .Register-Form__fileinput-box--danger .Register-Form__input-button{
   background-color:$theme_main_color;
-  border: 2px solid #FE5959;
-  color: #FE5959;
+  border: 2px solid $danger_color;
+  color: $danger_color;
   transition: 0.1s;
 }
 .Register-Form__input-error-msg{
@@ -618,7 +624,7 @@ top: 44px;
   left: 5px;
 }
 .Register-Form__input-error-msg--active{
-  color: #FE5959;
+  color: $danger_color;
   
 }
 
@@ -631,7 +637,7 @@ top: 44px;
   padding-right: 20px;
   width:344px;
   box-sizing: border-box;
-  background-color:#E7ECF4;
+  background-color:$button_backgrounds;
     border:$theme_input_border;
       min-height: 40px;
     border-radius: $theme_border_radius;
@@ -640,7 +646,7 @@ top: 44px;
     cursor: pointer;
 }
 .Register-Form__select--active{
-  background-color:#fff;
+  background-color:$light_color;
 
 }
 .Register-Form__select::after{
@@ -676,10 +682,10 @@ top: 44px;
 }
 .Register-Form__option:hover{
   background-color: #E9EDF5;
-  color: #00BABA;
+  color: $theme_special_light_color;
 }
 .Register-Form_type-selected{
-  color: #6A7D9B;
+  color:$theme_text_color;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -697,8 +703,8 @@ top: 44px;
     width: 92%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #DBE4F2;
+    background-color: $light_color;
+    border: $theme_input_border;
     border-radius: 16px;
     min-height: 169px;
     max-width: 100%;
@@ -731,7 +737,7 @@ top: 44px;
   background-color: $theme_main_color;
   border: none;
   border-radius: $theme_border_radius;
-  color: #9DB0CB;
+  color: $meeting_main_color;
   padding: 8px;
   box-sizing: border-box;
   text-align: center;
@@ -942,16 +948,16 @@ display: none;
     
     background-color: rgba(0,186,186,0.16);
     & span{
-      color: #00BABA;
+      color:$theme_special_light_color;
     }
     & img {
       display: none;
     }
   }
   .Projects__Tabs-Buttons-links-active{
-    background-color: #00BABA;
+    background-color: $theme_special_light_color;
     & span{
-      color: #fff;
+      color: $light_color;
     }
 
   }
@@ -962,7 +968,7 @@ display: none;
 .Projects__Tab-Boxes{
 
 border-radius: $theme_border_radius;
-background-color: #E7ECF4;
+background-color: $button_backgrounds;
 box-sizing: border-box;
 margin-bottom: 16px;
 padding: 10px;
@@ -975,7 +981,7 @@ padding: 10px;
 
 }
 .Projects__Tab-Boxes-Active{
-  background-color: #fff;
+  background-color: $light_color;
   border-bottom:2px solid $theme_special_color ;
 }
 .Projects__Tab-Box-Details-Git-person{
@@ -1020,7 +1026,7 @@ padding: 10px;
 }
 .Meeting-structure__Tab-Button--active{
   background-color: $theme_special_color;
-  color: #fff;
+  color: $light_color;
 }
 .Register-Form-main{
   padding: 56px 0px 133px;
@@ -1100,7 +1106,7 @@ padding: 10px;
 
 .Register-Form__fileinput-box{
   border-radius: $theme_border_radius;
-  border: 1px solid #DBE4F2;
+  border: $theme_input_border;
 }
 .Register-Form__field-full span{
   display:none;
@@ -1119,7 +1125,7 @@ padding: 10px;
   width: 100%;
 }
 .Register-Form__input-error-msg{
-  color:#9DB0CB ;
+  color:$meeting_main_color ;
 }
 }
 /*# sourceMappingURL=custom.css.map */
