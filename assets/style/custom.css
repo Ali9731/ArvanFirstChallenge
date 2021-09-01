@@ -1169,6 +1169,7 @@ button {
     width: 100%;
   }
   .Projects__Tab-Boxes {
+    width: 100%;
     border-radius: 16px;
     background-color: #E7ECF4;
     -webkit-box-sizing: border-box;
