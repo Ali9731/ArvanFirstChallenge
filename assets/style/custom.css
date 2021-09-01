@@ -1,3 +1,21 @@
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   font-family: 'YekanBakh';
 }
@@ -146,7 +164,7 @@ button {
   top: 44px;
 }
 
-.Projects__Tabs-Buttons-links:first-child::before {
+.Projects__Tabs-Buttons-links-active-links:first-child::before {
   content: "" !important;
 }
 
@@ -159,24 +177,6 @@ button {
   padding-top: 15px;
   border-radius: 16px 0px 16px 16px;
   padding-bottom: 80px;
-}
-
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .Projects__Tab-Boxes {
@@ -332,11 +332,6 @@ button {
   position: relative;
 }
 
-.Projects__Tab-Box-Details-intro-text {
-  width: 85%;
-  line-height: 35px;
-}
-
 .Projects__Tab-Box-Details-intro-text p {
   position: relative;
   color: #6A7D9B;
@@ -351,6 +346,11 @@ button {
   width: 8px;
   height: 8px;
   top: 8px;
+}
+
+.Projects__Tab-Box-Details-intro-text {
+  width: 85%;
+  line-height: 35px;
 }
 
 .Projects__Tab-Box-Details-Git {
@@ -935,6 +935,11 @@ button {
   height: 335px;
 }
 
+.Footer-gallery {
+  width: 1079px;
+  position: relative;
+}
+
 .Footer-gallery__title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -945,11 +950,6 @@ button {
   width: 100%;
   margin-top: 115px;
   margin-bottom: 60px;
-}
-
-.Footer-gallery {
-  width: 1079px;
-  position: relative;
 }
 
 .Footer-gallery__main {
@@ -982,7 +982,7 @@ button {
   transition: 0.5s;
 }
 
-.Footer-gallery__boxes .Footer-gallery__boxes-item {
+.Footer-gallery__boxes-item {
   width: 50px;
   margin-left: 35px;
   margin-right: 35px;
@@ -1005,6 +1005,10 @@ button {
   content: url(../images/gallery-hover.svg);
 }
 
+.Footer-gallery__boxes-right-sign--deactive {
+  display: none;
+}
+
 .Footer-gallery__boxes-left-sign {
   position: absolute;
   left: 40px;
@@ -1016,17 +1020,13 @@ button {
   content: url(../images/gallery-left.svg);
 }
 
-.Footer-gallery__boxes-left-sign:hover:before {
+.Footer-gallery__boxes-left-sign:hover::before {
   content: url(../images/gallery-hover.svg);
   display: inline-block;
   height: 45px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   top: 0;
-}
-
-.Footer-gallery__boxes-right-sign--deactive {
-  display: none;
 }
 
 .Footer-gallery__boxes-left-sign--deactive {
@@ -1080,11 +1080,11 @@ button {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .Meeting-structure__Tab-Buttons {
-    width: 90%;
-  }
   .Meeting-structure__Content-Boxes-container {
     padding: 0;
+  }
+  .Meeting-structure__Tab-Buttons {
+    width: 90%;
   }
   .Meeting-structure__Title-content {
     padding: 20px;
@@ -1102,12 +1102,6 @@ button {
   .Footer-gallery {
     width: 100%;
   }
-  .Footer-gallery .Footer-gallery__boxes-right-sign {
-    display: none;
-  }
-  .Footer-gallery .Footer-gallery__boxes-left-sign {
-    display: none;
-  }
   .Footer-gallery__boxes {
     position: unset;
     display: -webkit-box;
@@ -1117,12 +1111,18 @@ button {
         flex-wrap: wrap;
     overflow: unset;
   }
-  .Footer-gallery__main {
-    height: auto;
-    width: 100%;
+  .Footer-gallery__boxes-right-sign {
+    display: none;
+  }
+  .Footer-gallery__boxes-left-sign {
+    display: none;
   }
   .Footer-gallery__boxes-item {
     width: 10% !important;
+  }
+  .Footer-gallery__main {
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -1130,34 +1130,25 @@ button {
   .Container {
     width: 540px;
   }
-  .Projects__Tabs-Buttons-links::after {
-    content: "";
-  }
-  .Projects__Tabs-Buttons-links::before {
-    content: "";
-  }
-  .Projects__Tab-Buttons {
-    overflow: scroll;
-    height: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+  .Projects {
+    padding-bottom: 0;
   }
   .Projects__Tabs-Buttons-links {
     height: 40px;
-  }
-  .Projects__Tab-Boxes-Active {
-    height: 1150px;
-  }
-  .Projects__Tabs-Buttons-links {
     background-color: rgba(0, 186, 186, 0.16);
+    height: 40px;
   }
   .Projects__Tabs-Buttons-links span {
     color: #00BABA;
   }
   .Projects__Tabs-Buttons-links img {
     display: none;
+  }
+  .Projects__Tabs-Buttons-links::after {
+    content: "";
+  }
+  .Projects__Tabs-Buttons-links::before {
+    content: "";
   }
   .Projects__Tabs-Buttons-links-active {
     background-color: #00BABA;
@@ -1169,6 +1160,14 @@ button {
     top: 30px;
     background-color: transparent;
   }
+  .Projects__Tab-Buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    overflow: scroll;
+    height: 60px;
+    display: flex;
+    width: 100%;
+  }
   .Projects__Tab-Boxes {
     border-radius: 16px;
     background-color: #E7ECF4;
@@ -1177,21 +1176,26 @@ button {
     margin-bottom: 16px;
     padding: 10px;
   }
+  .Projects__Tab-Boxes-Active {
+    background-color: #fff;
+    border-bottom: 2px solid #20C5BA;
+    height: 1150px;
+  }
   .Projects__Tab-Box-Title {
     margin-top: 0;
   }
   .Projects__Tab-Box-Title::before {
     display: none;
   }
-  .Projects__Tab-Boxes-Active {
-    background-color: #fff;
-    border-bottom: 2px solid #20C5BA;
-  }
   .Projects__Tab-Box-Details-Git-person {
     display: none;
   }
-  .Projects {
-    padding-bottom: 0;
+  .Projects__Tab-Box-Details-Git-address {
+    position: relative;
+  }
+  .Projects__Tab-Box-Details-Git-address p {
+    position: absolute;
+    right: -110px;
   }
   .Meeting-structure__Title {
     padding-top: 80px;
@@ -1246,24 +1250,23 @@ button {
     margin-left: unset !important;
     margin-right: unset !important;
   }
-  .Projects__Tab-Box-Details-Git-address {
-    position: relative;
-  }
-  .Projects__Tab-Box-Details-Git-address p {
-    position: absolute;
-    right: -110px;
-  }
 }
 
 @media only screen and (max-width: 576px) {
   body {
-    font-size: unset;
+    font-size: unset !important;
   }
   .Container {
     width: 100%;
   }
   .Projects__Tab-Boxes-Active {
     height: auto;
+  }
+  .Projects__Tab-Buttons-links span {
+    min-width: 134px;
+  }
+  .Projects__Tab-Box-Details-Git-address p {
+    right: -80px;
   }
   .Projects__Tabs-Buttons-links span {
     min-width: 134px;
@@ -1295,22 +1298,8 @@ button {
   .Register-Form__Boxes {
     background-color: transparent;
   }
-  .Projects__Tab-Box-Details-Box {
-    width: 100%;
-  }
-  .Projects__Tab-Boxes {
-    width: 95%;
-  }
-  .Meeting-structure {
-    padding-bottom: 100px;
-  }
   .Register-Form__select {
     width: 75%;
-  }
-  .Projects__Tab-Box-Details-Git {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   .Register-Form__fileinput-box {
     border-radius: 16px;
@@ -1325,14 +1314,28 @@ button {
   .Register-Form__field-select .Register-Form__label {
     display: none;
   }
-  .D-none-Big {
-    display: block;
-  }
   .Register-Form__select {
     width: 100%;
   }
   .Register-Form__input-error-msg {
     color: #9DB0CB;
+  }
+  .D-none-Big {
+    display: block;
+  }
+  .Projects__Tab-Box-Details-Box {
+    width: 100%;
+  }
+  .Projects__Tab-Box-Details-Git {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .Projects__Tab-Boxes {
+    width: 95%;
+  }
+  .Meeting-structure {
+    padding-bottom: 100px;
   }
 }
 /*# sourceMappingURL=custom.css.map */
