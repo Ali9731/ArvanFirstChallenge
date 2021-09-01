@@ -886,7 +886,7 @@ button {
   .Projects{
     &__Tab{
       &-Box{
-        &-Detailes{
+        &-Details{
           &-Boxes{
             flex-wrap: wrap;
           }
@@ -967,7 +967,9 @@ button {
     padding-bottom: 0;
     &__Tabs{
       &-Buttons{
+
         &-links{
+          height: 40px;
           background-color: rgba(0,186,186,0.16);
           & span{
             color:$theme_special_light_color;
@@ -996,22 +998,24 @@ button {
       top: 30px;
       background-color: transparent;
       &-Buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         overflow: scroll;
         height: 60px;
         display: flex;
         width: 100%;
       }
       &-Boxes{
-        border-radius: $theme_border_radius;
-background-color: $button_backgrounds;
-box-sizing: border-box;
-margin-bottom: 16px;
-padding: 10px;
-        &-Active{
-          background-color: $light_color;
-          border-bottom:2px solid $theme_special_color ;
-          height: 1150px;
-        }
+          border-radius: $theme_border_radius;
+          background-color: $button_backgrounds;
+          box-sizing: border-box;
+          margin-bottom: 16px;
+          padding: 10px;
+            &-Active{
+            background-color: $light_color;
+            border-bottom:2px solid $theme_special_color ;
+            height: 1150px;
+          }
       }
       &-Box{
         &-Title{
@@ -1104,7 +1108,10 @@ padding: 10px;
 
 }
 @media only screen and (max-width: 576px) {
-.Container{
+body{
+  font-size: unset !important;
+}
+  .Container{
   width: 100%;
 }
 .Projects{
@@ -1117,6 +1124,25 @@ padding: 10px;
     &-Buttons{
       &-links{
         span{min-width: 134px;}
+      }
+    }
+    &-Box{
+      &-Details{
+        &-Git-address{
+          p{
+            right: -80px;
+          }
+          
+        }
+      }
+    }
+  }
+  &__Tabs{
+    &-Buttons{
+      &-links{
+        span{
+          min-width: 134px;
+        }
       }
     }
   }
