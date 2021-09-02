@@ -758,6 +758,9 @@ button {
   cursor: pointer;
   
 }
+.Register-Form__submit-btn--deactive{
+  cursor: pointer;
+}
 .Register-Form__submit-btn--active:hover{
   background-color:#009191 ;
   box-shadow:$theme_box_shadow ;

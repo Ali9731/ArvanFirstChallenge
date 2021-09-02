@@ -924,6 +924,10 @@ button {
   cursor: pointer;
 }
 
+.Register-Form__submit-btn--deactive {
+  cursor: pointer;
+}
+
 .Register-Form__submit-btn--active:hover {
   background-color: #009191;
   -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.11);
