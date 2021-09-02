@@ -120,32 +120,35 @@ for (i = 0; i < opt.length; i++) {
 })();
 
 (function() { 
-
-for (var i = 0; i < document.getElementsByClassName("Register-Form__input").length; i++) {
-    document.getElementsByClassName("Register-Form__input")[i].addEventListener("keyup", Register_form_validate)
+const input=document.getElementsByClassName("Register-Form__input");
+const inputfile=document.getElementsByClassName("Register-Form__fileinput");
+for (var i = 0; i < input.length; i++) {
+    input[i].addEventListener("keyup", Register_form_validate)
   }
-for ( var i = 0; i < document.getElementsByClassName("Register-Form__fileinput").length; i++) {
-    document.getElementsByClassName("Register-Form__fileinput")[i].addEventListener("change",Register_form_validate)
+for ( var i = 0; i < inputfile.length; i++) {
+    inputfile[i].addEventListener("change",Register_form_validate)
 }
 })();
 
 //Register form required fields validate
 function Register_form_validate(){
     var errors=0;
-    
-    for(var i=0;i< document.getElementsByClassName('Register-Form__input--required').length;i++){
-        if( document.getElementsByClassName('Register-Form__input--required')[i].value==""){
+    var inputr=document.getElementsByClassName('Register-Form__input--required');
+    var inputfiler=document.getElementsByClassName('Register-Form__fileinput--required');
+    var button=document.getElementById('Register-form__submitbtn');
+    for(var i=0;i< inputr.length;i++){
+        if( inputr[i].value==""){
             errors++
         }
     }
-    for(var i=0;i< document.getElementsByClassName('Register-Form__fileinput--required').length;i++){
-        if( document.getElementsByClassName('Register-Form__fileinput--required')[i].value==""){
+    for(var i=0;i< inputfiler.length;i++){
+        if( inputfiler[i].value==""){
             errors++
         }
     }
     if(errors==0){
-        document.getElementById('Register-form__submitbtn').className="Register-Form__submit-btn Register-Form__submit-btn--active";
-        document.getElementById('Register-form__submitbtn').addEventListener("click",Register_form_final_validate);
+        button.className="Register-Form__submit-btn Register-Form__submit-btn--active";
+        button.addEventListener("click",Register_form_final_validate);
         
     }else{
         document.getElementsByClassName('Register-Form__submit-btn').className="Register-Form__submit-btn";
@@ -155,43 +158,44 @@ function Register_form_validate(){
 
 function Register_form_final_validate(){
     var errors=0;
-        
-    for(var i=0;i< document.getElementsByClassName('Register-Form__input').length;i++){
-        if( document.getElementsByClassName('Register-Form__input')[i].value.length > 60){
-            document.getElementsByClassName('Register-Form__input')[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active"
-            document.getElementsByClassName('Register-Form__input')[i].nextElementSibling.innerHTML="تعداد کاراکتر باید کمتر از 60 باشد";
-            document.getElementsByClassName('Register-Form__input')[i].classList+=" Register-Form__input--error";
+    var input=document.getElementsByClassName('Register-Form__input'); 
+    var inputemail=  document.getElementsByClassName('Register-Form__input-email');
+    var inputphone=document.getElementsByClassName('Register-Form__input-phone');
+    for(var i=0;i< input.length;i++){
+        if( input[i].value.length > 60){
+            input[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active"
+            input[i].nextElementSibling.innerHTML="تعداد کاراکتر باید کمتر از 60 باشد";
+            input[i].classList+=" Register-Form__input--error";
             }else{
-                document.getElementsByClassName('Register-Form__input')[i].nextElementSibling.innerHTML="";
-                document.getElementsByClassName('Register-Form__input')[i].classList.remove("Register-Form__input--error");
+                input[i].nextElementSibling.innerHTML="";
+                input[i].classList.remove("Register-Form__input--error");
                 
             }
         }
         if(errors==0){
             
-            for(var i=0;i< document.getElementsByClassName('Register-Form__input-email').length;i++){
-                if(!validateEmail(document.getElementsByClassName('Register-Form__input-email')[i].value)){
-                    document.getElementsByClassName('Register-Form__input-email')[i].classList+=" Register-Form__input--error";
-                    document.getElementsByClassName('Register-Form__input-email')[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active";
-                    document.getElementsByClassName('Register-Form__input-email')[i].nextElementSibling.innerHTML="فرمت ایمیل اشتباه است";
+            for(var i=0;i< inputemail.length;i++){
+                if(!validateEmail(inputemail[i].value)){
+                    inputemail[i].classList+=" Register-Form__input--error";
+                    inputemail[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active";
+                    inputemail[i].nextElementSibling.innerHTML="فرمت ایمیل اشتباه است";
                     errors++
                 }else{
                    // document.getElementsByClassName('Register-input-email')[i].classList.remove("Register-Form__input--error");
-                    document.getElementsByClassName('Register-Form__input-email')[i].nextElementSibling.className="Register-Form__input-error-msg";
-                    document.getElementsByClassName('Register-Form__input-email')[i].nextElementSibling.innerHTML="";
+                   inputemail[i].nextElementSibling.className="Register-Form__input-error-msg";
+                   inputemail[i].nextElementSibling.innerHTML="";
                 }
             }
-            for(var i=0;i< document.getElementsByClassName('Register-Form__input-phone').length;i++){
-                if(validatePhone(document.getElementsByClassName('Register-Form__input-phone')[i].value )){
-                    
-                    document.getElementsByClassName('Register-Form__input-phone')[i].classList+=" Register-Form__input--error";
-                    document.getElementsByClassName('Register-Form__input-phone')[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active";
-                    document.getElementsByClassName('Register-Form__input-phone')[i].nextElementSibling.innerHTML="شماره تلفن باید به صورت عددی باشد";
+            for(var i=0;i<inputphone.length;i++){
+                if(validatePhone(inputphone[i].value )){
+                    inputphone[i].classList+=" Register-Form__input--error";
+                    inputphone[i].nextElementSibling.className="Register-Form__input-error-msg Register-Form__input-error-msg--active";
+                    inputphone[i].nextElementSibling.innerHTML="شماره تلفن باید به صورت عددی باشد";
                     errors++
                 }else{
-                    document.getElementsByClassName('Register-Form__input-phone')[i].classList.remove("Register-Form__input--error");
-                    document.getElementsByClassName('Register-Form__input-phone')[i].nextElementSibling.className="Register-Form__input-error-msg";
-                    document.getElementsByClassName('Register-Form__input-phone')[i].nextElementSibling.innerHTML="";
+                    inputphone[i].classList.remove("Register-Form__input--error");
+                    inputphone[i].nextElementSibling.className="Register-Form__input-error-msg";
+                    inputphone[i].nextElementSibling.innerHTML="";
                    
                 }
             }
@@ -211,6 +215,31 @@ function validatePhone(phone){
     return re.test(String(phone).toLowerCase());
 }
 
+function send_form_data(){
+    var name,phone,mail,company,resume,portfolio,type,level,description;
+    name=document.getElementById('Register-Form_name').value;
+    phone=document.getElementById('Register-Form_phone').value;
+    mail=document.getElementById('Register-Form_email').value;
+    company=document.getElementById('Register-Form_company_name').value;
+    resume=document.getElementById('Register-Form_resume').value;
+    portfolio=document.getElementById('Register-Form_portfolio').value;
+    type=document.getElementById('Register-Form_type').value;
+    level=document.getElementById('Register-Form_level').value;
+    description=document.getElementById('Register-Form_description').innerHTML;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 202) {
+            alert('فرم با موفقیت ثبت گردید');
+            document.getElementsByClassName('Register-Form')[0].remove();
+       }
+    };
+    xmlhttp.open("POST", "https://coda.io/apis/v1/docs/4p8T6nIqok/tables/ArvanTest/rows");
+    xmlhttp.setRequestHeader("Authorization", "Bearer c6a2f01e-765e-462b-8893-7f396e419528");
+    xmlhttp.setRequestHeader("Content-Type", "application/json");
+    xmlhttp.send(JSON.stringify({rows:[{cells:[ {'column': 'name', 'value':name},{'column': 'phone', 'value':phone},{'column': 'mail', 'value': mail},{'column': 'company', 'value': company},{'column': 'resume', 'value': resume},{'column': 'portfolio', 'value': portfolio},{'column': 'type', 'value': type},{'column': 'level', 'value':level},{'column': 'description', 'value': description}, ]}]}));
+   
+
+}
 
 
 
@@ -241,33 +270,5 @@ function gallery_slide(slctor,position){
         }
      }
     
-
-}
-
-
-
-function send_form_data(){
-    var name,phone,mail,company,resume,portfolio,type,level,description;
-    name=document.getElementById('Register-Form_name').value;
-    phone=document.getElementById('Register-Form_phone').value;
-    mail=document.getElementById('Register-Form_email').value;
-    company=document.getElementById('Register-Form_company_name').value;
-    resume=document.getElementById('Register-Form_resume').value;
-    portfolio=document.getElementById('Register-Form_portfolio').value;
-    type=document.getElementById('Register-Form_type').value;
-    level=document.getElementById('Register-Form_level').value;
-    description=document.getElementById('Register-Form_description').innerHTML;
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 202) {
-            alert('فرم با موفقیت ثبت گردید');
-            document.getElementsByClassName('Register-Form')[0].remove();
-       }
-    };
-    xmlhttp.open("POST", "https://coda.io/apis/v1/docs/4p8T6nIqok/tables/ArvanTest/rows");
-    xmlhttp.setRequestHeader("Authorization", "Bearer c6a2f01e-765e-462b-8893-7f396e419528");
-    xmlhttp.setRequestHeader("Content-Type", "application/json");
-    xmlhttp.send(JSON.stringify({rows:[{cells:[ {'column': 'name', 'value':name},{'column': 'phone', 'value':phone},{'column': 'mail', 'value': mail},{'column': 'company', 'value': company},{'column': 'resume', 'value': resume},{'column': 'portfolio', 'value': portfolio},{'column': 'type', 'value': type},{'column': 'level', 'value':level},{'column': 'description', 'value': description}, ]}]}));
-   
 
 }
